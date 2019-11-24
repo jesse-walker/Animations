@@ -27,12 +27,16 @@ public class MainActivity extends AppCompatActivity {
 
                 // Log.i("MYTAG", "HelloWorld");
 
-                if (txtHelloWorld.getAlpha() == 1) {
+                //if (txtHelloWorld.getAlpha() == 1) {
+                if (isHelloShowing) {
                     txtHelloWorld.animate().alpha(0).setDuration(1000);
                     txtHiWorld.animate().alpha(1).setDuration(1000);
-                } else if (txtHelloWorld.getAlpha() == 0) {
+                    isHelloShowing = false;
+                //} else if (txtHelloWorld.getAlpha() == 0) {
+                } else if (!isHelloShowing) {
                     txtHelloWorld.animate().alpha(1).setDuration(1000);
                     txtHiWorld.animate().alpha(0).setDuration(1000);
+                    isHelloShowing = true;
                 }
             }
         });
