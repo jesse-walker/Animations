@@ -3,40 +3,50 @@ package com.example.animations;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView txtHelloWorld;
-    private TextView txtHiWorld;
-    private Boolean isHelloShowing;
+    private TextView next;
+    private TextView previous;
+    private ImageView one;
+    private ImageView two;
+    private ImageView three;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        txtHelloWorld = findViewById(R.id.txtHelloWorld);
-        txtHiWorld = findViewById(R.id.txtHiWorld);
+        next = findViewById(R.id.txtNext);
+        previous = findViewById(R.id.txtPrevious);
+        one = findViewById(R.id.imageView);
+        two = findViewById(R.id.imageView2);
+        three = findViewById(R.id.imageView3);
 
-        txtHelloWorld.setOnClickListener(new View.OnClickListener() {
+        next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 // Log.i("MYTAG", "HelloWorld");
 
-                //if (txtHelloWorld.getAlpha() == 1) {
-                if (isHelloShowing) {
-                    txtHelloWorld.animate().alpha(0).setDuration(1000);
-                    txtHiWorld.animate().alpha(1).setDuration(1000);
-                    isHelloShowing = false;
-                //} else if (txtHelloWorld.getAlpha() == 0) {
-                } else if (!isHelloShowing) {
-                    txtHelloWorld.animate().alpha(1).setDuration(1000);
-                    txtHiWorld.animate().alpha(0).setDuration(1000);
-                    isHelloShowing = true;
+                if (one.getAlpha() == 1) {
+                    one.animate().alpha(0).setDuration(1000);
+                    two.animate().alpha(1).setDuration(1000);
+                }
+            }
+        });
+        previous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Log.i("MYTAG", "HelloWorld");
+
+                if (two.getAlpha() == 1) {
+                    two.animate().alpha(0).setDuration(1000);
+                    one.animate().alpha(1).setDuration(1000);
                 }
             }
         });
