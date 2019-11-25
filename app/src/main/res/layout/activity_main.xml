@@ -73,15 +73,16 @@
         android:layout_height="281dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:alpha="1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/lion"
-        tools:srcCompat="@tools:sample/backgrounds/scenic[1]" />
+        app:srcCompat="@drawable/tiger"
+        tools:srcCompat="@drawable/tiger" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -89,14 +90,14 @@
         android:layout_height="281dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="344dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:alpha="1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/lion"
-        tools:srcCompat="@drawable/tiger" />
+        app:srcCompat="@drawable/tiger" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
